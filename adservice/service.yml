@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: adservice
   labels:
-    backstage.io/kubernetes-id: test-k8s-component
+    backstage.io/kubernetes-id: adservice
 spec:
   type: ClusterIP
   selector:

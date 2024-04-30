@@ -4,6 +4,7 @@ metadata:
   name: cartservice
   labels:
     backstage.io/kubernetes-id: cartservice
+    portService: cartservice
 spec:
   selector:
     matchLabels:

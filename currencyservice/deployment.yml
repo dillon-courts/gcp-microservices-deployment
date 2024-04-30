@@ -2,6 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: currencyservice
+  labels:
+    backstage.io/kubernetes-id: currencyservice
+    portService: currencyservice
 spec:
   selector:
     matchLabels:
@@ -10,6 +13,7 @@ spec:
     metadata:
       labels:
         app: currencyservice
+        backstage.io/kubernetes-id: currencyservice
     spec:
       serviceAccountName: default
       terminationGracePeriodSeconds: 5
