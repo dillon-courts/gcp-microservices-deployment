@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: paymentservice
+  labels:
+    backstage.io/kubernetes-id: paymentservice
 spec:
   selector:
     matchLabels:
@@ -10,6 +12,7 @@ spec:
     metadata:
       labels:
         app: paymentservice
+        backstage.io/kubernetes-id: paymentservice
     spec:
       serviceAccountName: default
       terminationGracePeriodSeconds: 5
