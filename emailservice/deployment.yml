@@ -4,7 +4,7 @@ metadata:
   name: emailservice
   labels:
     backstage.io/kubernetes-id: emailservice
-    # portService: emailservice
+    portService: emailservice
 spec:
   selector:
     matchLabels:
