@@ -2,8 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: checkoutservice
-  backstage.io/kubernetes-id: checkoutservice
-  portService: checkoutservice
+  labels:
+    backstage.io/kubernetes-id: checkoutservice
+    portService: checkoutservice
 spec:
   selector:
     matchLabels:
