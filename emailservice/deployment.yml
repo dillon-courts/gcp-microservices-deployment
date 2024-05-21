@@ -2,6 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: emailservice
+  labels:
+    backstage.io/kubernetes-id: emailservice
+    # portService: emailservice
 spec:
   selector:
     matchLabels:
@@ -10,6 +13,7 @@ spec:
     metadata:
       labels:
         app: emailservice
+        backstage.io/kubernetes-id: emailservice
     spec:
       serviceAccountName: default
       terminationGracePeriodSeconds: 5
